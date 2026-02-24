@@ -1,0 +1,42 @@
+body{
+    background-color: #070B34;
+}
+header{
+    display: flex;
+    justify-content:space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #ffff;
+}
+
+#containerTituloPrincipal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#tituloPrincipal{
+    font-size: 3rem;
+    color: #ffff;
+    margin: 0;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#busca{
+    box-shadow: none;
+    color: white;
+    background-color: #2A2E5A;
+}
+.submitPesquisar{
+    box-shadow: none;
+    color: white;
+    background-color:#5C6CFF;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
