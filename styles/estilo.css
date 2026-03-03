@@ -28,15 +28,80 @@ header{
     margin-top: 2rem;
 }
 
+
+
 #busca{
     box-shadow: none;
     color: white;
     background-color: #2A2E5A;
 }
+
 .submitPesquisar{
     box-shadow: none;
     color: white;
     background-color:#5C6CFF;
     border-radius: 5px;
     margin-left: 1rem;
+}
+.principal{
+    display: flex;
+    border: green solid 1px;
+    justify-content: space-between;
+}
+
+.esquerda{
+    padding-left: 6rem;
+}
+
+.weather-header{
+    display: flex;
+    justify-content: space-between;
+    border: brown solid 1px;
+    width: 20rem;
+    color:white;
+}
+
+.weather ul{
+    padding: 0;
+}
+
+.weatherCard{
+    display: flex;
+}
+
+.weatherCard{
+    width: 100%;
+    color: white;
+    list-style-type: none;
+    background-color: #1C1F4A;
+    border: red solid 1px;
+
+}
+
+.dailyForecast{
+    display: flex;
+    padding: 0;
+}
+
+.dailyForecastCard{
+    width: 100%;
+    color: white;
+    list-style-type: none;
+    background-color: #1C1F4A;
+    border: yellow solid 1px;
+}
+
+.direita{
+    padding-right: 6rem;
+}
+
+
+.hourlyForecast{
+    background-color: #1C1F4A;
+}
+
+
+.hourlyForecastTop{
+    display: flex;
+    color: white;
 }
