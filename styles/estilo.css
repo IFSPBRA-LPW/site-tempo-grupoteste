@@ -1,13 +1,32 @@
+
 body{
     background-color: #070B34;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 header{
     display: flex;
-    justify-content:space-between;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    color: #ffff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: white;
 }
+
+header div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header button{
+    background-color: #1e2465;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
 
 #containerTituloPrincipal{
     display: flex;
@@ -18,7 +37,7 @@ header{
 
 #tituloPrincipal{
     font-size: 3rem;
-    color: #ffff;
+    color: white;
     margin: 0;
 }
 
@@ -28,80 +47,120 @@ header{
     margin-top: 2rem;
 }
 
-
-
-#busca{
-    box-shadow: none;
-    color: white;
-    background-color: #2A2E5A;
+.search input{
+    width: 350px;
+    padding: 0.6rem;
+    border: none;
+    outline: none;
+    border-radius: 6px 0 0 6px;
 }
 
 .submitPesquisar{
-    box-shadow: none;
+    padding: 0.6rem 1rem;
+    border: none;
+    background-color: #3b82f6;
     color: white;
-    background-color:#5C6CFF;
-    border-radius: 5px;
-    margin-left: 1rem;
+    border-radius: 0 6px 6px 0;
 }
+
 .principal{
     display: flex;
-    border: green solid 1px;
-    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 .esquerda{
-    padding-left: 6rem;
+    width: 70%;
+}
+
+.direita{
+    width: 30%;
 }
 
 .weather-header{
     display: flex;
     justify-content: space-between;
-    border: brown solid 1px;
-    width: 20rem;
-    color:white;
+    align-items: center;
+    background: linear-gradient(135deg,#3b82f6,#6366f1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.weather-header h3{
+    margin: 0;
+}
+
+.weather-header p{
+    margin: 0;
+}
+
+.weather-header div:last-child p{
+    font-size: 3rem;
 }
 
 .weather ul{
+    display: flex;
+    gap: 1rem;
     padding: 0;
 }
 
 .weatherCard{
-    display: flex;
-}
-
-.weatherCard{
-    width: 100%;
+    list-style: none;
+    background-color: #11164d;
     color: white;
-    list-style-type: none;
-    background-color: #1C1F4A;
-    border: red solid 1px;
-
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
 }
 
 .dailyForecast{
     display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
     padding: 0;
 }
 
 .dailyForecastCard{
-    width: 100%;
+    list-style: none;
+    background-color: #11164d;
     color: white;
-    list-style-type: none;
-    background-color: #1C1F4A;
-    border: yellow solid 1px;
+    padding: 1rem;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
 }
-
-.direita{
-    padding-right: 6rem;
-}
-
 
 .hourlyForecast{
-    background-color: #1C1F4A;
+    background-color: #0f1445;
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
 }
-
 
 .hourlyForecastTop{
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.hourlyForecastTop button{
+    background-color: #1e2465;
+    border: none;
     color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+}
+
+.hourlyForecast ul{
+    padding: 0;
+}
+
+.hourlyForecast li{
+    list-style: none;
+    padding: 0.7rem;
+    border-bottom: 1px solid #1e2465;
+}
 }
