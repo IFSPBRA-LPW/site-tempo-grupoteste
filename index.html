@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="/scripts/index.js" defer></script>
     <link rel="stylesheet" href="/styles/estilo.css">
     <title>Tempo</title>
 </head>
@@ -27,49 +28,65 @@
            <div class="esquerda">
                 <section class="weather-header">
                     <div>
-                        <h3>Berlin, Germany</h3>
-                        <p>Tuesday, Aug 5, 2025</p>
+                        <h3 class="nameCity"></h3>
+                        <p class="date"></p>
                     </div>
                     <div>
-                        <p>20°</p>
+                        <p class="temperature"></p>
                     </div>
                 </section>
                 <section class="weather">
                     <ul >
                         <li class="weatherCard">
                             <p>Feels Like</p>
-                            <p>18°</p>
+                            <p class="weatherCard_Temperature"></p>
                         </li>
                         <li class="weatherCard">
-                            <p>Wind 20km/h</p>
+                            <p>Humidity</p>
+                            <p class="weatherCard_Humidity"></p>
                         </li>
                         <li class="weatherCard">
-                            <p>Wind 22km/h</p>
+                            <p>Wind</p>
+                            <p class="weatherCard_Wind"></p>
                         </li>
                         <li class="weatherCard">
-                            <p>Preciptation 0mm</p>
+                            <p>Preciptation</p>
+                            <p class="weatherCard_Precipitation"></p>
                         </li>
                     </ul>
                 
                 </section>
 
                 <section>
-                    <ul class="dailyForecast">
-                        <li class="dailyForecastCard">Tue</li>
-                        <li class="dailyForecastCard">Wed</li>
-                        <li class="dailyForecastCard"></li>
-                        <li class="dailyForecastCard"></li>
-                        <li class="dailyForecastCard"></li>
-                        <li class="dailyForecastCard"></li>
-                        <li class="dailyForecastCard"></li>
+                    <ul class="daily">
+                        <li class="dailyCard">
+                        </li>
+                        <li class="dailyCard">
+                            
+                        </li>
+                        <li class="dailyCard">
+                        </li>
+                        <li class="dailyCard">
+                            
+
+                        </li>
+                        <li class="dailyCard">
+                            
+                        </li>
+                        <li class="dailyCard">
+                            
+                        </li>
+                        <li class="dailyCard">
+                            
+                        </li>
                     </ul>
                 </section>
 
            </div>
 
            <div class="direita">
-                <section class="hourlyForecast">
-                    <div class="hourlyForecastTop">
+                <section class="hourly">
+                    <div class="hourlyTop">
                         <p>Hourly forecast</p>
                         <button>Tuesday</button>
 

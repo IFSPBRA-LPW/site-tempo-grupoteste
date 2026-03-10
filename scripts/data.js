@@ -12,7 +12,7 @@ export const cityWeather = {
         { day: "Tue", icon: "🌧", max: 20, min: 14 },
         { day: "Wed", icon: "🌧", max: 21, min: 15 },
         { day: "Thu", icon: "☀", max: 24, min: 14 },
-        { day: "Fri", icon: " ", max: 25, min: 13 },
+        { day: "Fri", icon: "🌧", max: 25, min: 13 },
         { day: "Sat", icon: "⛈", max: 21, min: 15 },
         { day: "Sun", icon: "☁", max: 25, min: 16 },
         { day: "Mon", icon: "🌫", max: 24, min: 15 },
@@ -27,4 +27,4 @@ export const cityWeather = {
         { time: "9 PM", temp: 17 },
         { time: "10 PM", temp: 17 },
     ],
-};
+}

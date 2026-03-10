@@ -116,14 +116,14 @@ header button{
     text-align: center;
 }
 
-.dailyForecast{
+.daily{
     display: flex;
     gap: 1rem;
     margin-top: 1.5rem;
     padding: 0;
 }
 
-.dailyForecastCard{
+.dailyCard{
     list-style: none;
     background-color: #11164d;
     color: white;
@@ -133,20 +133,20 @@ header button{
     text-align: center;
 }
 
-.hourlyForecast{
+.hourly{
     background-color: #0f1445;
     padding: 1rem;
     border-radius: 10px;
     color: white;
 }
 
-.hourlyForecastTop{
+.hourlyTop{
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
 }
 
-.hourlyForecastTop button{
+.hourlyTop button{
     background-color: #1e2465;
     border: none;
     color: white;
@@ -154,13 +154,13 @@ header button{
     border-radius: 6px;
 }
 
-.hourlyForecast ul{
+.hourly ul{
     padding: 0;
 }
 
-.hourlyForecast li{
+.hourly li{
     list-style: none;
     padding: 0.7rem;
     border-bottom: 1px solid #1e2465;
 }
-}
+
