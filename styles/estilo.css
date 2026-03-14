@@ -82,7 +82,7 @@ header button{
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(135deg,#3b82f6,#6366f1);
-    padding: 1.5rem;
+    padding: 3.5rem;
     border-radius: 10px;
     color: white;
     margin-bottom: 1rem;
@@ -158,9 +158,11 @@ header button{
     padding: 0;
 }
 
-.hourly li{
+.hourlyCard{
     list-style: none;
     padding: 0.7rem;
     border-bottom: 1px solid #1e2465;
+    display: flex;
+    justify-content: space-between;
 }
 

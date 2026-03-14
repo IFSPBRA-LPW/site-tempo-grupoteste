@@ -49,7 +49,6 @@ function renderDaily(dailyData) {
 
 function renderHourly(hourlyData){
     const hourlyContainer = document.querySelector(".hourly")
-    hourlyContainer.innerHTML = ""
     hourlyData.hourly.forEach((hour) => {
         const li = document.createElement("li")
         li.className = "hourlyCard"
@@ -63,7 +62,12 @@ function renderHourly(hourlyData){
 }
 
 
-renderDaily(cityWeather)
-renderBannerInfo(cityWeather)
-renderDayInfo(cityWeather)
-renderHourly(cityWeather)
+
+function orquestradora(cityWeather){
+    renderBannerInfo(cityWeather)
+    renderDayInfo(cityWeather)
+    renderDaily(cityWeather)
+    renderHourly(cityWeather)
+}
+
+orquestradora(cityWeather)
