@@ -1,30 +1,40 @@
-export const cityWeather = {
-    city: "Berlim",
-    country: "Germany",
-    date: "Tuesday, Aug 5, 2025",
-    icon: "☀",
-    temperature: 20,
-    feelsLike: 18,
-    humidity: 46,
-    wind: 14,
-    precipitation: 0,
-    daily: [
-        { day: "Tue", icon: "🌧", max: 20, min: 14 },
-        { day: "Wed", icon: "🌧", max: 21, min: 15 },
-        { day: "Thu", icon: "☀", max: 24, min: 14 },
-        { day: "Fri", icon: "🌧", max: 25, min: 13 },
-        { day: "Sat", icon: "⛈", max: 21, min: 15 },
-        { day: "Sun", icon: "☁", max: 25, min: 16 },
-        { day: "Mon", icon: "🌫", max: 24, min: 15 },
-    ],
-    hourly: [
-        { time: "3 PM", temp: 20 },
-        { time: "4 PM", temp: 20 },
-        { time: "5 PM", temp: 20 },
-        { time: "6 PM", temp: 19 },
-        { time: "7 PM", temp: 18 },
-        { time: "8 PM", temp: 18 },
-        { time: "9 PM", temp: 17 },
-        { time: "10 PM", temp: 17 },
-    ],
+
+async function fetchWeather(city) {
+    const response = await fetch(
+        `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7&lang=pt`,
+    )
+    if (!response.ok) {
+        throw new Error("Erro ao buscar dados da API")
+    }
+    return response.json()
+}
+
+export function adaptWeatherData(data) {
+    return {
+        city: data.location.name,
+        country: data.location.country,
+        date: data.location.localtime,
+
+        icon: getWeatherIcon(data.current.condition.text),
+
+        temperature: Math.round(data.current.temp_c),
+        feelsLike: Math.round(data.current.feelslike_c),
+        humidity: data.current.humidity,
+        wind: data.current.wind_kph,
+        precipitation: data.current.precip_mm,
+
+        daily: data.forecast.forecastday.map(day => ({
+            day: formatDay(day.date),
+            icon: getWeatherIcon(day.day.condition.text),
+            max: Math.round(day.day.maxtemp_c),
+            min: Math.round(day.day.mintemp_c),
+        })),
+
+        hourly: data.forecast.forecastday[0].hour
+            .slice(0, 8)
+            .map(hour => ({
+                time: formatHour(hour.time),
+                temp: Math.round(hour.temp_c),
+            })),
+    }
 }
