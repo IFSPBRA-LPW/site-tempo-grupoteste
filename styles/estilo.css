@@ -164,5 +164,58 @@ header button{
     border-bottom: 1px solid #1e2465;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .principal {
+        flex-direction: column;
+    }
+    
+    .esquerda {
+        width: 100%;
+    }
+    
+    .direita {
+        width: 100%;
+    }
+    
+    .search input {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    #tituloPrincipal {
+        font-size: 2rem;
+    }
+    
+    .weather-header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+    }
+    
+    .daily {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+    
+    .weather ul {
+        flex-direction: column;
+    }
+    
+    .daily {
+        flex-direction: column;
+    }
+    
+    #tituloPrincipal {
+        font-size: 1.5rem;
+    }
 }
 

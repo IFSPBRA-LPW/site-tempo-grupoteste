@@ -1,5 +1,4 @@
-import { cityWeather } from "./data.js"
-console.log(cityWeather)
+import { getCityWeather } from "./data.js"
 
 function renderBannerInfo(data) {
 
@@ -39,7 +38,7 @@ function renderDaily(dailyData) {
         li.className = "dailyCard"
         li.innerHTML = `
             <p class="day-name">${day.day}</p>
-            <p class="day-icon">${day.icon}</p>
+            <img src="https:${day.icon}" alt="Ícone do clima" class="day-icon">
             <p class="day-max">${day.max}°</p>
             <p class="day-min">${day.min}°</p>
         `
@@ -61,8 +60,6 @@ function renderHourly(hourlyData){
 
 }
 
-
-
 function orquestradora(cityWeather){
     renderBannerInfo(cityWeather)
     renderDayInfo(cityWeather)
@@ -70,4 +67,18 @@ function orquestradora(cityWeather){
     renderHourly(cityWeather)
 }
 
-orquestradora(cityWeather)
+const form = document.querySelector(".search")
+form.addEventListener("submit", async (e) => {
+    e.preventDefault()
+    const city = document.querySelector("#busca").value
+    try {
+        const weatherData = await getCityWeather(city)
+        orquestradora(weatherData)
+        document.querySelector("#busca").value = ""
+    } catch (error) {
+        alert("Cidade não encontrada!")
+    }
+})
+
+// Carrega dados de São Paulo ao iniciar
+getCityWeather("São Paulo").then(data => orquestradora(data)).catch(() => alert("Erro ao carregar dados iniciais"))
