@@ -261,3 +261,23 @@ header button{
     }
 }
 
+body.light {
+    background-color: #f5f5f5;
+    color: #111;
+}
+
+body.light header {
+    color: #111;
+}
+
+body.light .weatherCard,
+body.light .dailyCard,
+body.light .hourly {
+    background-color: #ffffff;
+    color: #111;
+}
+
+body.light .weather-header {
+    background: linear-gradient(135deg,#60a5fa,#818cf8);
+}
+
