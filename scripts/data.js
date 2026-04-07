@@ -9,15 +9,15 @@ document.querySelector("form").addEventListener("submit", function(e) {
     fetchWeather(busca)
 })
 
-
-
 export async function fetchWeather(city) {
     const response = await fetch(
-        `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7&lang=pt`,
+        `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7&lang=pt`
     )
+
     if (!response.ok) {
         throw new Error("Erro ao buscar dados da API")
     }
+
     return response.json()
 }
 
@@ -30,7 +30,6 @@ export function adaptWeatherData(data) {
     return {
         city: data.location.name,
         country: data.location.country,
-
         date: data.location.localtime,
 
         icon: data.current.condition.icon,
@@ -47,11 +46,13 @@ export function adaptWeatherData(data) {
             min: day.day.mintemp_c
         })),
 
-        hourly: data.forecast.forecastday[0].hour.map(hour => ({
-            time: hour.time.split(" ")[1], 
-            temp: hour.temp_c
-        }))
+        hourly: data.forecast.forecastday.map(day => ({
+            hours: day.hour.map(hour => ({
+                time: hour.time.split(" ")[1],
+                temp: hour.temp_c
+            }))
+        })),
+
+        raw: data
     }
 }
-
-
