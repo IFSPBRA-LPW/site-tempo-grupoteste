@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,95 +8,83 @@
     <title>Tempo</title>
 </head>
 <body>
-    <header>
-        <div><img src="" alt=""><p>Weather Now</p></div>
-        <button><i class="fa-solid fa-gear"></i>Units</button>
-    </header>
-    <main>
-        <div id="containerTituloPrincipal">
-            <h1 id="tituloPrincipal">How's the sky looking today?</h1>
+
+<header>
+    <div>
+        <img src="" alt="">
+        <p>Weather Now</p>
+    </div>
+
+    <div style="display: flex; gap: 10px;">
+        <button id="changeDay">Hoje</button>
+        <button id="themeToggle">🌙/☀️</button>
+    </div>
+</header>
+
+<main>
+    <div id="containerTituloPrincipal">
+        <h1 id="tituloPrincipal">How's the sky looking today?</h1>
+    </div>
+    
+    <section>
+        <form class="search">
+            <input type="search" id="busca" placeholder="Digite sua pesquisa..." required>
+            <button type="submit" class="submitPesquisar">Pesquisar</button>
+        </form>
+    </section>
+
+    <div class="principal">
+
+        <div class="esquerda">
+            <section class="weather-header">
+                <div>
+                    <h3 class="nameCity"></h3>
+                    <p class="date"></p>
+                </div>
+                <div>
+                    <p class="temperature"></p>
+                </div>
+            </section>
+
+            <section class="weather">
+                <ul class="weather">
+                    <li class="weatherCard">
+                        <p>Feels Like</p>
+                        <p class="weatherCard_Temperature"></p>
+                    </li>
+                    <li class="weatherCard">
+                        <p>Humidity</p>
+                        <p class="weatherCard_Humidity"></p>
+                    </li>
+                    <li class="weatherCard">
+                        <p>Wind</p>
+                        <p class="weatherCard_Wind"></p>
+                    </li>
+                    <li class="weatherCard">
+                        <p>Precipitation</p>
+                        <p class="weatherCard_Precipitation"></p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <ul class="daily"></ul>
+            </section>
         </div>
-        
-        <section>
-            <form action="" class="search">
-                <input type="search" id="busca" name="q" placeholder="Digite sua pesquisa..." required>
-                <button type="submit" class="submitPesquisar">Pesquisar</button>
-            </form>
-        </section>
 
-        <div class="principal">
-           <div class="esquerda">
-                <section class="weather-header">
-                    <div>
-                        <h3 class="nameCity"></h3>
-                        <p class="date"></p>
-                    </div>
-                    <div>
-                        <p class="temperature"></p>
-                    </div>
-                </section>
-                <section class="weather">
-                    <ul class="weather">
-                        <li class="weatherCard">
-                            <p>Feels Like</p>
-                            <p class="weatherCard_Temperature"></p>
-                        </li>
-                        <li class="weatherCard">
-                            <p>Humidity</p>
-                            <p class="weatherCard_Humidity"></p>
-                        </li>
-                        <li class="weatherCard">
-                            <p>Wind</p>
-                            <p class="weatherCard_Wind"></p>
-                        </li>
-                        <li class="weatherCard">
-                            <p>Preciptation</p>
-                            <p class="weatherCard_Precipitation"></p>
-                        </li>
-                    </ul>
-                
-                </section>
+        <div class="direita">
+            <section class="hourly">
+                <div class="hourlyTop">
+                    <p>Hourly forecast</p>
+                    <button id="changeDay">Hoje</button>
+                </div>
 
-                <section>
-                    <ul class="daily">
-                        <li class="dailyCard">
-                        </li>
-                        <li class="dailyCard">
-                            
-                        </li>
-                        <li class="dailyCard">
-                        </li>
-                        <li class="dailyCard">
-                            
-
-                        </li>
-                        <li class="dailyCard">
-                            
-                        </li>
-                        <li class="dailyCard">
-                            
-                        </li>
-                        <li class="dailyCard">
-                            
-                        </li>
-                    </ul>
-                </section>
-
-           </div>
-
-           <div class="direita">
-                <section class="hourly">
-                    <div class="hourlyTop">
-                        <p>Hourly forecast</p>
-                        <button>Tuesday</button>
-
-                    </div>
-                    
-                    <ul>
-                    </ul>
-                </section>
-           </div>
+                <ul></ul>
+            </section>
         </div>
-    </main>
+
+    </div>
+</main>
+
 </body>
 </html>
